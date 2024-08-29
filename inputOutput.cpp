@@ -26,10 +26,14 @@
 #include <string>
 using namespace std;
 int main(){
-    string name;
-    cout<<"enter your name for greetings";
-    getline(cin,name);
-    cout<<"hey  dude " <<name<<" is mine    name too"<< endl;
+    string first_name;
+    string last_name;
+    cout<<"enter your first name for greetings\n";
+    getline(cin,first_name);
+    cout<<"enter your last name ";
+    getline(cin,last_name);
+
+    cout<<"hey " <<first_name<<" "<<last_name<< " welcome to my first program \v"<<endl;
 
     return 0;
 }
