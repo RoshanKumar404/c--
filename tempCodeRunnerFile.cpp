@@ -1,0 +1,1 @@
+cout<<second_array;
