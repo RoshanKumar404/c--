@@ -12,7 +12,7 @@ second_array[2]=3;
 cout<<second_array[0]<<" SECOND ARRAY content at index 0 without providing any value \n ";
 *second_array=40;
 
-// cout<<second_array;
+// cout<<second_arra y;
 cout<<second_array[0]<<" updated value with the help of  pointer, at index 0 \n ";
 int *ap=second_array;
 ap++;
