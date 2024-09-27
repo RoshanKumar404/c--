@@ -3,17 +3,20 @@ using namespace std;
 int main(){
 
 int my_nmber[]={2,4 ,5,6,45,3};
-int i =0;
-while (i<6){
-    if(i==5){
-    break;
+// int i =0;
+// while (i<6){
+//     if(i==5){
+//     break;
 
-    }
-       cout<< "the number at index "<< i << " is "<< my_nmber[i] +19 <<endl;
-       i++;
+//     }
+//        cout<< "the number at index "<< i << " is "<< my_nmber[i] +19 <<endl;
+//        i++;
     
 
 
+// }
+for(int i:my_nmber){
+    cout<<(i+12)*2 <<endl;
 }
 cout<<"out of the loop"<<endl;
 
