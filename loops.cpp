@@ -1,24 +1,24 @@
-// #include<iostream>
-// using namespace std;
-// int main(){
+#include<iostream>
+using namespace std;
+int main(){
 
-// int my_nmber[]={2,4 ,5,6,45,3};
-// int i =0;
-// while (i<6){
-//     if(i==5){
-//     break;
+int my_nmber[]={2,4 ,5,6,45,3};
+int i =0;
+while (i<6){
+    if(i==5){
+    break;
 
-//     }
-//        cout<< "the number at index "<< i << " is "<< my_nmber[i]<<endl;
-//        i++;
+    }
+       cout<< "the number at index "<< i << " is "<< my_nmber[i] +19 <<endl;
+       i++;
     
 
 
-// }
-// cout<<"out of the loop"<<endl;
+}
+cout<<"out of the loop"<<endl;
 
-//   return 0;  
-// };
+  return 0;  
+};
 
 // #include<iostream>
 // using namespace std;
@@ -56,21 +56,21 @@
 //     return 0;
 // }
 
-#include<iostream>
-using namespace std;
-int main(){
-    int n;
-    cin>>n;
-    int reversed=0;
- while (n!=0)
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n;
+//     cin>>n;
+//     int reversed=0;
+//  while (n!=0)
  
  
-    {
-        int digit= n%10;
-        reversed=reversed*10+digit;
-        n/=10;
-    }
-    cout<<reversed;
-}
+//     {
+//         int digit= n%10;
+//         reversed=reversed*10+digit;
+//         n/=10;
+//     }
+//     cout<<reversed;
+// }
 
 
