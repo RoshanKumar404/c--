@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
-int main(){
+// int main(){
 
-int my_nmber[]={2,4 ,5,6,45,3};
+// int my_nmber[]={2,4 ,5,6,45,3};
 // int i =0;
 // while (i<6){
 //     if(i==5){
@@ -15,13 +15,13 @@ int my_nmber[]={2,4 ,5,6,45,3};
 
 
 // }
-for(int i:my_nmber){
-    cout<<(i+12)*2 <<endl;
-}
-cout<<"out of the loop"<<endl;
+// for(int i:my_nmber){
+//     cout<<(i+12)*2 <<endl;
+// }
+// cout<<"out of the loop"<<endl;
 
-  return 0;  
-};
+//   return 0;  
+// };
 
 // #include<iostream>
 // using namespace std;
@@ -75,5 +75,16 @@ cout<<"out of the loop"<<endl;
 //     }
 //     cout<<reversed;
 // }
+
+int main(){
+
+char name[]="jairamjiki";
+for (int i = 0; i < name[i]; i++)
+{
+  cout<<"the characters are :\n "<<name[i]<<endl;
+}
+
+  return 0;
+}
 
 
