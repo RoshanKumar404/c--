@@ -36,12 +36,20 @@ public class SearchStrings{
             return false;
         }
         
-        for (int i = 0; i < str.length(); i++) {
-            char chr=str.charAt(i);
-            if (target==chr) {
-               return true;
-           // System.out.println("char founded " + chr);
-        }     
+        // for (int i = 0; i < str.length(); i++) {
+        //     char chr=str.charAt(i);
+        //     if (target==chr) {
+        //        return true;
+        //    // System.out.println("char founded " + chr);
+        // }     
+        //}
+
+
+        // using for each
+        for(char ch:str.toCharArray()){
+            if(ch==target){
+                return true;
+            }
         }
          return false;
              
