@@ -43,14 +43,7 @@ public class SearchStrings{
         //    // System.out.println("char founded " + chr);
         // }     
         //}
-
-
-        // using for each
-        for(char ch:str.toCharArray()){
-            if(ch==target){
-                return true;
-            }
-        }
+        for(char ch:str.toCharArray)
          return false;
              
         }
