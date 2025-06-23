@@ -63,7 +63,8 @@ public class searchMInimum {
     public static void main(String[] args) {
         int[] arr = { 3, 5, 6, 3, -6, 2, -8 };
         System.out.println(SearchMin(arr));
-        
+        int[]arrmax={2,5,2,64,7,3,5,33,5};
+        System.out.println(SearchMax(arrmax));
 
     }
     static int SearchMin(int[] arr){
@@ -76,6 +77,14 @@ public class searchMInimum {
         return finalans;
 
     }
-   
+    static int SearchMax(int[]arrmax){
+        int ans=arrmax[0];
+        for (int i = 1; i < arrmax.length; i++) {
+            if (arrmax[i]>ans){
+                ans=arrmax[i];
+            } 
+        }
+        return ans;
+    }
 
 }
