@@ -48,43 +48,73 @@
 
 //         }
 //     }
+// public class searchMInimum {
+//     // static int SearchMin(int[] arr) {
+//     //     int min = arr[0];
+//     //     for (int i = 1; i < arr.length; i++) {
+//     //         if (arr[i] < min) {
+//     //             min = arr[i];
+//     //         }
+
+//     //     }
+//     //     return min;
+//     // }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 3, 5, 6, 3, -6, 2, -8 };
+//         System.out.println(SearchMin(arr));
+//         int[]arrmax={2,5,2,64,7,3,5,33,5};
+//         System.out.println(SearchMax(arrmax));
+
+//     }
+//     static int SearchMin(int[] arr){
+//         int finalans=arr[0];
+//         for (int i = 1; i < arr.length; i++) {
+//                 if(arr[i]<finalans){
+//                     finalans=arr[i];
+//                 }
+//         }
+//         return finalans;
+
+//     }
+//     static int SearchMax(int[]arrmax){
+//         int ans=arrmax[0];
+//         for (int i = 1; i < arrmax.length; i++) {
+//             if (arrmax[i]>ans){
+//                 ans=arrmax[i];
+//             } 
+//         }
+//         return ans;
+//     }
+
+// }
+
+//Search in 2d array
+
+import java.util.Arrays;
+
 public class searchMInimum {
-    // static int SearchMin(int[] arr) {
-    //     int min = arr[0];
-    //     for (int i = 1; i < arr.length; i++) {
-    //         if (arr[i] < min) {
-    //             min = arr[i];
-    //         }
-
-    //     }
-    //     return min;
-    // }
-
-    public static void main(String[] args) {
-        int[] arr = { 3, 5, 6, 3, -6, 2, -8 };
-        System.out.println(SearchMin(arr));
-        int[]arrmax={2,5,2,64,7,3,5,33,5};
-        System.out.println(SearchMax(arrmax));
-
-    }
-    static int SearchMin(int[] arr){
-        int finalans=arr[0];
-        for (int i = 1; i < arr.length; i++) {
-                if(arr[i]<finalans){
-                    finalans=arr[i];
+          public static void main(String[] args) {
+            int [][]arr={
+                {4,5,2,8,21,25},
+            {8,5,9,6,32},
+            {45,42,9,3,52,}
+            };
+            int target=52;
+            int[] ams=search(arr,target);
+            System.out.println(Arrays.toString(ams));
+          }
+          static int[] search(int[][] arr,int target){
+            for (int row = 0; row < arr.length; row++) {
+                for (int coulumn = 0; coulumn < arr[row].length; coulumn++) {
+                    if (arr[row][coulumn]==target) {
+                        return new int[]{row,coulumn};
+                    }
                 }
-        }
-        return finalans;
+                
+            }
 
-    }
-    static int SearchMax(int[]arrmax){
-        int ans=arrmax[0];
-        for (int i = 1; i < arrmax.length; i++) {
-            if (arrmax[i]>ans){
-                ans=arrmax[i];
-            } 
-        }
-        return ans;
-    }
 
+            return new int[]{-1,-1};
+          }
 }
