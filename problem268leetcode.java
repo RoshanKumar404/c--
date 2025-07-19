@@ -1,8 +1,8 @@
 public class problem268leetcode {
     public static void main(String[] args) {
-    int []nums={4,1,2,0};
+    int []nums={3,3,3,3,3};
 
-    int r= nums.length;
+    int r= nums.length-1;
     int Actualsu=r*(r+1)/2;
     int numSum=0;
 
@@ -10,11 +10,11 @@ public class problem268leetcode {
 
         numSum+=nums[i];
     }
-    int missing=Actualsu-numSum;
+    int missing=-Actualsu+numSum;
     System.out.println(missing);
     }
     
-    
+    //287
     
     
 }
