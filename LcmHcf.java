@@ -1,12 +1,20 @@
 public class LcmHcf {
     public static void main(String[] args) {
-        int[] arr = { 1,2,3,4,5};
+        int[] arr = {4,48};
         // int a = 4;
         // int b=8;
         // System.out.println(HCF(a, b)*LCM(a,b));
-        System.out.println("HCf of the array is : "+HCFarray(arr));
-        System.out.println("Lcm of the array is : "+ LCMarray(arr));
-        int factorStore=HCFarray(arr)*LCMarray(arr);
+        int factorStore;
+        if (arr.length == 1) {
+            factorStore = arr[0] * arr[0];
+        } else {
+            System.out.println("HCf of the array is : " + HCFarray(arr));
+            System.out.println("Lcm of the array is : " + LCMarray(arr));
+            factorStore = HCFarray(arr) * LCMarray(arr);
+            
+        }
+
+        // int
         System.out.println(factorStore);
 
     }
@@ -29,19 +37,26 @@ public class LcmHcf {
 
     // we will proceed for whole array
     public static int HCFarray(int[] arr) {
-        int result = arr[0];
+        // if (arr[0]%arr[1]==0) {
+        int result = arr[1];
         for (int o = 1; o < arr.length; o++) {
             result = HCF(result, arr[o]);
 
         }
         return result;
+
+        // }else{
+
+        // }
+
     }
+
     // we will proceed for LCM of whole array
-    public static int  LCMarray(int []arr){
-        int result=arr[0];
+    public static int LCMarray(int[] arr) {
+        int result = arr[0];
         for (int i = 1; i < arr.length; i++) {
-            result=LCM(result, arr[i]);
-            
+            result = LCM(result, arr[i]);
+
         }
         return result;
     }
