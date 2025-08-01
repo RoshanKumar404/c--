@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Stringbuilder {
     public static void main(String[] args){
         // StringBuilder builder=new StringBuilder();
@@ -10,9 +12,9 @@ String name= "ROshan kumar";
 String[] Splitted =name.split(" ");
 for(String split:Splitted){
     System.out.println(split);
-
 }
-System.out.println(Splitted);
+System.out.println(Arrays.toString(name.split(" ")));
+System.out.println(name.indexOf('u'));
 
 
     }
