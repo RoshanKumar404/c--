@@ -7,7 +7,7 @@ public class GoodPartitions {
 
     public static void main(String[] args) {
 
-        int[] nums = { 1, 2,1,3};
+        int[] nums = { 1,1,1,3};
         System.out.println(Partitions(nums));
 
     }
