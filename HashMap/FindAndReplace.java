@@ -9,14 +9,14 @@ public class FindAndReplace {
         String [] words={"abc","deq","mee","aqq","dkd","ccc"};
         String pattern="abb";
 
-        System.out.println(FindAndReplce(words,pattern));
+        System.out.println(FindReplce(words,pattern));
     }
-    public List <String> FindReplce(String []words,String pattern){
+    public static  List <String> FindReplce(String []words,String pattern){
 
         List<String> reult= new ArrayList<>();   
         String patternForm=normalised(pattern);
         for(String word:words){
-            if (normalised(pattern).equals(patternForm)) {
+            if (normalised(word).equals(patternForm)) {
                 reult.add(word);
                 
             }
@@ -24,7 +24,7 @@ public class FindAndReplace {
         return reult;
     
     }
-    private String  normalised(String word){
+    private static String  normalised(String word){
         Map<Character,Integer> map= new HashMap<>();
         StringBuilder sb=new StringBuilder();
         int code=0;
