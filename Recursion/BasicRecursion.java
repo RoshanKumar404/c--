@@ -12,6 +12,6 @@ public class BasicRecursion {
         Sendmessage2();
     }
     static void Sendmessage2(){
-        System.out.println("Ram Ram bhai Sarya ne");
+        System.out.println("Ram Ram bhai Sarya ne<<");
     }
 }

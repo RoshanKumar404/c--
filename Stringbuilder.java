@@ -14,7 +14,7 @@ for(String split:Splitted){
     System.out.println(split);
 }
 System.out.println(Arrays.toString(name.split(" ")));
-System.out.println(name.indexOf('u'));
+System.out.println(name.indexOf('a'));
 
 
     }
