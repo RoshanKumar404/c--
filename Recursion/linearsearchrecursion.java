@@ -54,4 +54,15 @@ public class linearsearchrecursion {
         }
         findlist(arr, target, i+1); 
     }
+
+    // returnig the arraylist
+    static ArrayList finder(int []arr,int target,int i,ArrayList<Integer>list){
+        if (i==arr.length) {
+            return list;
+        }
+        if (arr[i]==target) {
+           list.add(i);
+        }
+       return  finder(arr, target, i+1, list);
+    }
 }
