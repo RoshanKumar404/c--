@@ -21,11 +21,12 @@ public class linearsearchrecursion {
 
     //**************** */ now jut check that the element is present or not******************
     public static void main(String[] args) {
-        int []arr={23,4,534,2,534,42,543};
+        int []arr={23,4,534,2,534,42,2,543};
         int target=534;
         System.out.println(linear(arr, target,0));
         findlist(arr, target, 0);
         System.out.println(list);
+        System.out.println(finder2(arr,2,0));
     }
     static boolean linear(int []arr,int target,int i){
         if (i==arr.length) {
@@ -65,4 +66,17 @@ public class linearsearchrecursion {
         }
        return  finder(arr, target, i+1, list);
     }
+    // now we will have to take arraylist in the body isntead as parameter
+    static ArrayList<Integer> finder2(int []arr,int target, int i){
+        // first off all we will declare an array lst;
+        ArrayList<Integer>list= new ArrayList<>();
+        if (i== arr.length) {
+            return list;
+        }
+        if (arr[i]==target) {
+            list.add(i);
+        }
+        ArrayList<Integer>lissAlltheAnswer=finder2(arr,target,i+1);
+        list.addAll(lissAlltheAnswer);
+        return list;  }
 }
