@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class linearsearchrecursion {
     // public static void main(String[] args) {
     //     int[] arr={5,6,2,7,3,13,4};
@@ -19,9 +21,11 @@ public class linearsearchrecursion {
 
     //**************** */ now jut check that the element is present or not******************
     public static void main(String[] args) {
-        int []arr={23,4,534,2,42,543};
+        int []arr={23,4,534,2,534,42,543};
         int target=534;
         System.out.println(linear(arr, target,0));
+        findlist(arr, target, 0);
+        System.out.println(list);
     }
     static boolean linear(int []arr,int target,int i){
         if (i==arr.length) {
@@ -37,5 +41,17 @@ public class linearsearchrecursion {
 
         }
         return arr[i]==target || linear(arr, target, i-1);
+    }
+
+    // now we will search the target at multiple indexes and add the indices in an array********
+    static ArrayList<Integer>list=new ArrayList<>();
+    static void findlist(int []arr,int target,int i){
+        if(i==arr.length){
+            return ;
+        }
+        if (arr[i]== target) {
+            list.add(i);
+        }
+        findlist(arr, target, i+1); 
     }
 }
