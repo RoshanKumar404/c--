@@ -30,4 +30,12 @@ public class linearsearchrecursion {
         }
         return arr[i]==target || linear(arr, target, i+1);
     }
+    // this is for search from the last just have to change the index from 0 to array.length 
+        static boolean linearfromlast(int []arr,int target,int i){
+        if (i==-1) {
+            return false;
+
+        }
+        return arr[i]==target || linear(arr, target, i-1);
+    }
 }
