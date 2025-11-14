@@ -7,11 +7,13 @@ public class PatternRecursion {
             return;
         }
         if (col<row) {
-            System.out.print(" * ");
             Pattern(row, col+1);
+            System.out.print(" * ");
+            
         }else{
+             Pattern(row-1, 0);
             System.out.println();
-            Pattern(row-1, 0);
+           
         }
 
     }
