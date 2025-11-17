@@ -13,7 +13,7 @@ public class TriangleReursion {
         }
         //this will print spacesbefore stars
         Printspace(n-row);
-        printstarts(2*n-1);
+        printstarts(2*row-1);
         System.out.println();
         PrintTriangles(n,row+1);
     }
