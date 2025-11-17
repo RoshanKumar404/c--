@@ -2,7 +2,7 @@ public class PatternRecursion {
     public static void main(String[] args) {
         Pattern(5,0);
     }
-    static void Pattern(int row,int col){
+    static void Pattern(int row,int space,int col){
         if (row==0) {
             return;
         }
