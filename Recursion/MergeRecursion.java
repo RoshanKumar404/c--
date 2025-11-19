@@ -44,4 +44,10 @@ public class MergeRecursion {
 
         return mergedArray;
     }
+
+
+    // from here we will use the different approach , 
+    //in this approach we will use just the indices and divide the arrray on the basis 
+    // of indices and sort accordingly
+    
 }
