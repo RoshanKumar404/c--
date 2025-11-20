@@ -6,7 +6,7 @@ public class StringProblem {
         // System.out.println(d);
         System.out.println("next type");
         System.out.println(StringWithReturnType("afdasgvsa"));
-        System.out.println(Remover("afdapexjsd"));
+        System.out.println(Remover("afapexjsd"));
     }
 
 
@@ -46,11 +46,11 @@ public class StringProblem {
         }
         char ch= before.charAt(0);
         if (before.startsWith("apex")) {
-            return before.substring(5);
+            return Remover(before.substring(4));
 
             
         }else{
-            return ch+before.substring(5);
+            return ch+Remover(before.substring(1));
         }
 
     }
