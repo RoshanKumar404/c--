@@ -6,7 +6,9 @@ public class StringProblem {
         // System.out.println(d);
         System.out.println("next type");
         System.out.println(StringWithReturnType("afdasgvsa"));
+        System.out.println(Remover("afdapexjsd"));
     }
+
 
     static void changer(String before, String after) {
         if (before.isEmpty()) {
@@ -36,6 +38,21 @@ public class StringProblem {
 
             return ch + StringWithReturnType(before.substring(1));
         }
+    }
+    static String Remover(String before){
+        if (before.isEmpty()) {
+            return "";
+
+        }
+        char ch= before.charAt(0);
+        if (before.startsWith("apex")) {
+            return before.substring(5);
+
+            
+        }else{
+            return ch+before.substring(5);
+        }
+
     }
 
 }
