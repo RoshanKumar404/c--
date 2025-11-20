@@ -12,7 +12,7 @@ public class StringProblem {
         }
         char ch= before.charAt(0);
         if (ch=='a') {
-            changer(after, before.substring(1));
+            changer( before.substring(1),after);
 
         }else{ 
             
