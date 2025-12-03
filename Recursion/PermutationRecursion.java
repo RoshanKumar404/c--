@@ -17,5 +17,21 @@ static void permutation(String Unprocessed,String processed){
         permutation(Unprocessed.substring(1),First+ch+Second);
     }
 }
+static void Digit(String Up,String Pr){
+    if (Up.isEmpty()) {
+        System.out.println(Pr);
+        return;
+    }
+    char ch= Up.charAt(0);
+    if (Character.isDigit(ch)) {
+        Digit(Up.substring(1), Pr+ch);
+
+    }else{
+        Digit(Up.substring(1), Pr+Character.toLowerCase(ch));
+        Digit(Up.substring(1), Pr+ Character.toUpperCase(ch));
+    }
+    
+}
+    
 
 }
