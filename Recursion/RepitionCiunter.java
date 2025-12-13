@@ -17,4 +17,4 @@ return  Repitation(n,0);
         }
         return Repitation(n/10,c);
     }
-}
+} 
