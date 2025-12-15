@@ -1,7 +1,11 @@
+import java.util.ArrayList;
+
 public class MaizeProblem {
     public static void main(String[] args) {
-       System.out.println(maizeCount(3,3));
-       path("", 3, 3);
+    //    System.out.println(maizeCount(4,4));
+    //    path("", 4, 4);
+      // System.out.println(path("", 4, 4););
+      System.out.println(Pathreturn("", 3, 3).size());
     }
 
     static int maizeCount(int row, int column){
@@ -23,6 +27,23 @@ public class MaizeProblem {
         if (column>1) {
             path(Pr+'r', row, column-1);
         }
+        
+    }
+    static ArrayList<String>Pathreturn(String Pr,int row,int colum){
+        if (row==1&& colum==1) {
+            ArrayList<String>list= new ArrayList<>();
+            list.add(Pr);
+            System.out.println(Pr);
+            return list;
+        }
+        ArrayList<String>  list= new ArrayList<>();
+        if (row>1) {
+            list.addAll(Pathreturn(Pr+'D', row-1, colum));
+        }
+        if (colum>1) {
+            list.addAll(Pathreturn(Pr+'R', row, colum-1));
+        }
+        return list;
     }
     
 }
