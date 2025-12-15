@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class CustomFacedice {
     public static void main(String[] args) {
         int[]faces={1,3,5};
-//dice(faces,5,"");
+//i dice(faces,5,"");
         System.out.println(Dicereturn("", faces, 4).size());
         
     }
