@@ -9,8 +9,8 @@ public class Backtracking {
         // System.out.println();
     //    backtrack("", max, 0, 0);
        System.out.println(PathCounter(0, 0, max));
-    int [][] arr= new int[max.length][max[0].length];
-    BacktracPath("", max, 0, 0, 1, arr);
+    // int [][] arr= new int[max.length][max[0].length];
+    // BacktracPath("", max, 0, 0, 1, arr);
     }
 
     // static void backtrack(String pr, boolean[][] maixe, int r, int c) {
@@ -63,21 +63,25 @@ public class Backtracking {
         int right = PathCounter(r, c - 1, maxie);
         int up = PathCounter(r + 1, c, maxie);
         int down = PathCounter(r, c + 1, maxie);
-
+        //for diagonals
+        int DownRIght= PathCounter(r+1, c+1, maxie);
+        int DownLeft=PathCounter(r+1, c-1, maxie);
+        int UpRight=PathCounter(r-1, c+1, maxie);
+        int UpLeft=PathCounter(r-1, c-1, maxie);
         maxie[r][c] = true;
-        return left + right + down + up;
+        return left + right + down + up+DownLeft+DownRIght+UpLeft+UpRight;
 
     }
 
 static void BacktracPath(String Pr, boolean [][] maixe, int r, int c, int stage, int[][]arr){
   //always check for out of bounds and this is the condititon check that is need to be done before the recursion call
-  if (r<0||c<0||r>=maixe.length||c>=maixe[0].length) {
+  if (r<0||c<0||r>=maixe.length||c>=maixe[0].length||!maixe[r][c]) {
     return;
   }
   //it blocks the box that has been visited
-    if (!maixe[r][c]) {
-        return;
-    }
+    // if (!maixe[r][c]) {
+    //     return;
+    // }
     // this is the base case
     if (r==maixe.length-1&&c==maixe[0].length-1) {
         arr[r][c]=stage;
@@ -93,11 +97,17 @@ static void BacktracPath(String Pr, boolean [][] maixe, int r, int c, int stage,
     maixe[r][c]=false;
 
     arr[r][c]=stage;
-    // now the function calls
+    // now the function calls for the all four directions
     BacktracPath(Pr+'D', maixe, r+1, c, stage+1, arr);
     BacktracPath(Pr+'R', maixe, r, c+1, stage+1, arr);
     BacktracPath(Pr+'U', maixe, r-1, c, stage+1, arr);
     BacktracPath(Pr+'L', maixe, r, c-1, stage+1, arr);
+    // now the function calls for all four diagonals
+   
+    BacktracPath(Pr+" DR ", maixe, r+1, c+1, stage+1, arr);
+    BacktracPath(Pr+" DL ", maixe, r+1, c-1, stage+1, arr); 
+    BacktracPath(Pr+" UR ", maixe, r-1, c+1, stage+1, arr);
+    BacktracPath(Pr+" UL ", maixe, r-1, c-1, stage+1, arr);
    
     // if (r<maixe.length-1) {
         
