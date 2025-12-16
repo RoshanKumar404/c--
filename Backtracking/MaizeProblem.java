@@ -6,8 +6,8 @@ public class MaizeProblem {
         // path("", 4, 4);
         // System.out.println(path("", 4, 4););
         //System.out.println(Pathreturn("", 3, 3).size());
-        boolean[][] maixe={{true,true,true},
-                          {false,true,false},
+        boolean[][] maixe={{true,false,true},
+                          {true  ,true,false},
                           {true,true,true}};
                           BlockedPath("", maixe, 0, 0);
     }
