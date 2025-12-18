@@ -1,14 +1,18 @@
 public class Nquessn {
     public static void main(String[] args) {
-        int n=5;
+        int n=9;
         boolean[][]chessBoard= new boolean[n][n];
-        int Totalways= Nquens(chessBoard, 0);
-        System.out.println("The total number of ways to place all queens"+ Totalways);
-        Nquens(chessBoard, 0);
+  //       Totalways= Nquens(chessBoard, 0);
+        System.out.println( Nquens(chessBoard, 0));
+        //Nquens(chessBoard, 0);
+        System.out.println("calls"+ calls);
     }
+    static long calls=0;
     static int Nquens(boolean [][]chessBoard,int row){
+       calls++;
+
         if (row==chessBoard.length) {
-            PlacedQuens(chessBoard);
+          //  PlacedQuens(chessBoard);
             return 1;
 
         }
