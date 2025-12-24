@@ -3,27 +3,27 @@ public class Knights {
         int n = 4;
         boolean[][] board = new boolean[n][n];
         Knights(board, 0);
-    //    System.out.println(Knights(board,0));
+    System.out.println(Knights(board,0));
     }
 
 
-    static void Knights(boolean[][] board, int row) {
+    static int Knights(boolean[][] board, int row) {
         if (row == board.length) {
             printBoard(board);
           //  count+= Knights(board, row);
             System.out.println();
-            return ;
+            return 1 ;
         }
-// int count= 0;
+ int count= 0;
 
         for (int col = 0; col < board.length; col++) {
             if (isSafe(board, row, col)) {
                 board[row][col] = true;
-                Knights(board, row + 1);
+              count +=  Knights(board, row + 1);
                 board[row][col] = false; // backtrack
             }
         }
-        // return count;
+         return count;
     }
 
     static boolean isSafe(boolean[][] board, int row, int col) {
