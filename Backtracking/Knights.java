@@ -2,16 +2,16 @@ public class Knights {
     public static void main(String[] args) {
         int n = 4;
         boolean[][] board = new boolean[n][n];
-        Knights(board, 0);
+       // Knights(board, 0);
     System.out.println(Knights(board,0));
     }
 
 
     static int Knights(boolean[][] board, int row) {
         if (row == board.length) {
-            printBoard(board);
-          //  count+= Knights(board, row);
-            System.out.println();
+           // printBoard(board);
+           // count+= Knights(board, row);
+            //System.out.println();
             return 1 ;
         }
  int count= 0;
