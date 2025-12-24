@@ -8,8 +8,8 @@ public class MultipleKnight {
     }
     static int Knights(boolean [][]board,int row, int col, int Knight){
 if (Knight==0) {
-    //  printBoard(board);
-    //  System.out.println();
+     printBoard(board);
+     System.out.println();
     return 1;
 
 }
@@ -47,7 +47,14 @@ static boolean isSafe(boolean[][]board,int row,int col){
     }
     return true;
 }
- 
+ private static void printBoard(boolean[][] board) {
+        for (boolean[] row : board) {
+            for (boolean cell : row) {
+                System.out.print(cell ? "K " : ". ");
+            }
+            System.out.println();
+        }
+    }
 
 
 }
