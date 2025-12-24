@@ -31,7 +31,7 @@ public class Nquessn {
      }
        private static boolean isSafe(boolean [][]chessBoard, int row, int col ){
         //check vertical row
-        for(int i=0;i<row;i++){
+        for(int i=0;i<=row;i++){
             if (chessBoard[i][col]) {
                 return false;
             }
