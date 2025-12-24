@@ -1,10 +1,10 @@
 public class Nquessn {
     public static void main(String[] args) {
-        int n=9;
+        int n=4;
         boolean[][]chessBoard= new boolean[n][n];
   //       Totalways= Nquens(chessBoard, 0);
         System.out.println( Nquens(chessBoard, 0));
-        //Nquens(chessBoard, 0);
+        Nquens(chessBoard, 0);
         System.out.println("calls"+ calls);
     }
     static long calls=0;
@@ -12,7 +12,7 @@ public class Nquessn {
        calls++;
 
         if (row==chessBoard.length) {
-          //  PlacedQuens(chessBoard);
+           PlacedQuens(chessBoard);
             return 1;
 
         }
