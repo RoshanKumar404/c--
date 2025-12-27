@@ -8,7 +8,6 @@ public class MultipleKnight {
     }
     static int Knights(boolean [][]board,int row, int col, int Knight){
 if (Knight==0) {
-     printBoard(board);
      System.out.println();
     return 1;
 
