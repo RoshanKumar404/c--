@@ -6,6 +6,30 @@ public class LLBase {
     public LLBase() {
         this.size = 0;
     }
+    // this is how we insert at a specific  index
+    public void InsertSpecif(int val, int index){
+        if(index<0||index>size){
+            System.out.println("enter the the index bw the range\n  i.e 0 and " +size);
+            return;
+        }
+        if (index==0) {
+            InsertFirst(val);
+            return;
+        }
+        if (index==size) {
+            Insertlst(val);
+            return;     
+        }
+        
+        Node temp = head;
+        for(int i=1;i<index;i++){
+          temp=temp.next;
+        }
+        Node node=new Node(val,temp.next);
+        temp.next=node;
+        size++;
+        
+    }
 
     //this is how we add a node at start of the list
     public void InsertFirst(int val){

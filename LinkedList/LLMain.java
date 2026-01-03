@@ -8,6 +8,7 @@ public class LLMain {
      list.Insertlst(13);
     list.InsertFirst(23);
     list.InsertFirst(2);
+    list.InsertSpecif(10,12);
    
     
 
