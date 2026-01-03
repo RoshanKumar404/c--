@@ -113,6 +113,30 @@ public class LLBase {
         return val;
 
     }
+    public int deleteSepcific(int index){
+      if (index<0||index>=size) {
+        throw new IndexOutOfBoundsException("invalid index");
+      }
+    //   if (index==0) {
+    //      return deleteFirst();
+        
+    //   }
+      if (index==size) {
+        return deletelast();
+      }
+      Node prev=  head;
+      for(int i=1;i<index;i++){
+        prev=prev.next;
+      }
+      int val = prev.next.value;
+      prev.next=prev.next.next;
+      if (index==size-1){
+        tail=prev;
+      }
+      size--;
+      return val;
+    }
+
 
     public void display() {
         Node temp = head;

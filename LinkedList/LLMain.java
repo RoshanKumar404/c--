@@ -13,8 +13,9 @@ public class LLMain {
     
 
     list.display();
-    System.out.println(list.deleteFirst());
-    System.out.println(list.deletelast());
+   //  System.out.println(list.deleteFirst());
+   //  System.out.println(list.deletelast());
+   System.out.println(list.deleteSepcific(4));
     list.display();
    }
   
