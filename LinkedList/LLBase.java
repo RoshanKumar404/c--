@@ -130,6 +130,8 @@ public class LLBase {
       }
       int val = prev.next.value;
       prev.next=prev.next.next;
+      // this is for , if the last node that is
+      //  pointing to tail is index to remove then this will handle.
       if (index==size-1){
         tail=prev;
       }
