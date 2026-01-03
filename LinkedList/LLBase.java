@@ -19,6 +19,23 @@ public class LLBase {
         size+=1;
 
     }
+    // this is how we insert the elment at the end of the list
+    // or the next to tail
+    public void Insertlst(int val){
+        if (tail==null) {
+            InsertFirst(val);
+            return;
+            
+        }
+        Node node= new Node(val);
+        tail.next=node;
+        tail =node;
+// if (tail==null) {
+//     head=tail;
+    
+// }
+        size++;
+    }
     public void display(){
       Node temp=head;
       while (temp!=null) {
