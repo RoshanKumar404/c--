@@ -8,10 +8,13 @@ public class LLMain {
      list.Insertlst(13);
     list.InsertFirst(23);
     list.InsertFirst(2);
-    list.InsertSpecif(10,12);
+   //  list.InsertSpecif(10,12);
    
     
 
+    list.display();
+    System.out.println(list.deleteFirst());
+    System.out.println(list.deletelast());
     list.display();
    }
   
