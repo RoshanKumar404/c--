@@ -1,9 +1,9 @@
 public class LLMain {
      public static void main(String[] args) {
-    llPractice list= new llPractice();
+   //  llPractice list= new llPractice();
 
-    list.Insertstart(150);
-    list.Insertstart(32);
+   //  list.Insertstart(150);
+   //  list.Insertstart(32);
    //  list.Insertstart(42);
     
     list.Insertstart(23);
