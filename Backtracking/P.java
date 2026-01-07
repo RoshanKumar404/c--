@@ -47,17 +47,17 @@ public class P {
         return true;
     }
 
-    // private static void Placed(boolean[][]ChessBoard){
-    //     for(boolean[]row:ChessBoard){
-    //         for(boolean element:row){
-    //             if (element) {
-    //                 System.out.print("Q");
-    //             }else{
-    //                 System.out.print("X");
-    //             }
+    private static void Placed(boolean[][]ChessBoard){
+        for(boolean[]row:ChessBoard){
+            for(boolean element:row){
+                if (element) {
+                    System.out.print("Q");
+                }else{
+                    System.out.print("X");
+                }
 
-    //         }
-    //         System.out.println();
-    //     }
-    // }
+            }
+            System.out.println();
+        }
+    }
 }
