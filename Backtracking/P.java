@@ -37,27 +37,27 @@ public class P {
 
         }
         //for right diagonal
-        int MaxRight= Math.min(row, ChessBoard.length-col-1);
-        for(int i=1;i<=MaxRight;i++){
-            if (ChessBoard[row-i][col+i]) {
-                return false;
+        // int MaxRight= Math.min(row, ChessBoard.length-col-1);
+        // for(int i=1;i<=MaxRight;i++){
+        //     if (ChessBoard[row-i][col+i]) {
+        //         return false;
                 
-            }
-        }
+        //     }
+        // }
         return true;
     }
 
-    private static void Placed(boolean[][]ChessBoard){
-        for(boolean[]row:ChessBoard){
-            for(boolean element:row){
-                if (element) {
-                    System.out.print("Q");
-                }else{
-                    System.out.print("X");
-                }
+    // private static void Placed(boolean[][]ChessBoard){
+    //     for(boolean[]row:ChessBoard){
+    //         for(boolean element:row){
+    //             if (element) {
+    //                 System.out.print("Q");
+    //             }else{
+    //                 System.out.print("X");
+    //             }
 
-            }
-            System.out.println();
-        }
-    }
+    //         }
+    //         System.out.println();
+    //     }
+    // }
 }
