@@ -4,12 +4,12 @@ public class LLMain {
 
     list.Insertstart(150);
     list.Insertstart(32);
-    list.Insertstart(42);
+   //  list.Insertstart(42);
     
     list.Insertstart(23);
     list.Insertend(20);
    //  list.InsertSpecif(10,12);
-   list.Insertbw(10,2);
+   // list.Insertbw(10,2);
     
 
     list.display();
