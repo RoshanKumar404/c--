@@ -138,6 +138,19 @@ public class LLBase {
       size--;
       return val;
     }
+  
+    // find node by value
+public Node find(int val) {
+    Node node = head;
+    while (node != null) {
+        if (node.value == val) {
+            return node;
+        }
+        node = node.next;
+    }
+    return null;
+}
+
 
 
     public void display() {
@@ -161,6 +174,10 @@ public class LLBase {
             this.value = value;
             this.next = next;
         }
+         @Override
+    public String toString() {
+        return String.valueOf(value);
+    }
 
     }
 
