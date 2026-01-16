@@ -12,7 +12,7 @@ public class DoubleLL {
 
     // lets try to insert at the first
     Node head;
-    Node tail;
+    // Node tail;
 
     public void InsertFirst(int val) {
         Node node = new Node(val);
@@ -28,10 +28,10 @@ public class DoubleLL {
     public void display(){
         Node node= head;
         while (node!=null) {
-            System.out.println(node.val +  " -> ");
+            System.out.print(node.val +  " -> ");
             node=node.next;
         }
-        System.out.println();
+        System.out.println("Null");
     }
 
     private class Node {
