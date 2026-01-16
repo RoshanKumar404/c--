@@ -46,6 +46,8 @@ public class DoubleLL {
 
         tail = node;
     }
+    // if the tail is not provided and asked to add at last 
+    // so travers to second last node and add at that node 
 
     public void display() {
         Node node = head;
