@@ -7,6 +7,7 @@ public class DoubleMain {
     list.InsertFirst(26);
 
     list.InsertFirst(20);
+    list.insertLLast(32);
     list.display();
 
    }

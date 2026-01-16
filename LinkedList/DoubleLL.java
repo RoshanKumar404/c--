@@ -10,9 +10,10 @@ public class DoubleLL {
      * 
      */
 
-    // lets try to insert at the first
     Node head;
-    // Node tail;
+    Node tail;
+
+    // lets try to insert at the first
 
     public void InsertFirst(int val) {
         Node node = new Node(val);
@@ -23,12 +24,33 @@ public class DoubleLL {
             head.prev = node;
         }
         head = node;
+        //here updating the tail after adding the node
+        if (tail == null) {
+            tail = head;
+        }
+    }
 
+    // lets try to insert at the last
+    public void insertLLast(int val) {
+        Node node = new Node(val);
+        if (head == null) {
+            head = node;
+            tail = node;
+            return;
+        }
+        // connecting the current tail to new node
+        tail.next = node;
+
+        // this is setting th current tail as previous node
+        node.prev = tail;
+
+        tail = node;
     }
 
     public void display() {
         Node node = head;
         Node last = null;
+        System.out.println("printing  normally");
 
         while (node != null) {
             System.out.print(node.val + " -> ");
