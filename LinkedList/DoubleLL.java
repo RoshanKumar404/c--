@@ -48,6 +48,17 @@ public class DoubleLL {
     }
     // if the tail is not provided and asked to add at last 
     // so travers to second last node and add at that node 
+    // ***lets insert to next to the given node ******
+    public void InsernextTo(int val,int index){
+        Node node= new Node(val,index);
+        node.next=next.index;
+        next.next= node;
+        while (node.next!=null) {
+            node.next =node;
+        }
+        node.prev= next.index;
+
+    }
 
     public void display() {
         Node node = head;
@@ -77,6 +88,10 @@ public class DoubleLL {
 
         public Node(int val) {
             this.val = val;
+        }
+        public Node(int value, Node next) {
+            this.value = value;
+            this.next = next;
         }
 
         public Node(int val, Node next, Node prev) {
