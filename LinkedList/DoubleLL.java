@@ -50,13 +50,33 @@ public class DoubleLL {
     // so travers to second last node and add at that node 
     // ***lets insert to next to the given node ******
     public void InsernextTo(int val,int index){
-        Node node= new Node(val,index);
-        node.next=next.index;
-        next.next= node;
-        while (node.next!=null) {
-            node.next =node;
+        Node node= new Node(val);
+        if (head==null) {
+            InsertFirst(val);
+            return;
         }
-        node.prev= next.index;
+        Node temp= head;
+        //  traversing  to the given index
+        for(int i=0;i<index;i++){
+            temp=temp.next;
+            if (temp==null) {
+                System.out.println("Index Out of Bound");
+                return;
+            }
+        }
+        // connectin the nodes
+        node.next= temp.next;  // this is pointing  forward or next node
+        temp.next=node;// pointing to new node
+        node.prev=temp; // this is pointing backwards
+        // node.next=next.index;
+        // node.next= node;
+       if (node.next!=null) {
+        // the node after points  back  to new node
+        node.next.prev= node;
+
+       }else{
+        tail=node; // updating the next
+       }
 
     }
 
@@ -89,11 +109,7 @@ public class DoubleLL {
         public Node(int val) {
             this.val = val;
         }
-        public Node(int value, Node next) {
-            this.value = value;
-            this.next = next;
-        }
-
+        
         public Node(int val, Node next, Node prev) {
             this.val = val;
             this.next = next;
