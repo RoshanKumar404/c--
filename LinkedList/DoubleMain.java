@@ -5,9 +5,11 @@ public class DoubleMain {
     list.InsertFirst(5);
 
     list.InsertFirst(26);
+    list.insertLLast(54);
 
     list.InsertFirst(20);
     list.insertLLast(32);
+    list.InsernextTo(25,3);
     list.display();
 
    }
