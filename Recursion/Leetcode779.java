@@ -11,6 +11,8 @@ public class Leetcode779 {
         if (k<=mid) {
             return solve(n-1, k);
         }else{
+            // here im complementting the result to get the desired reult as 
+            // the second half is the complemtn of 1st half
             return 1-solve(n-1, k-mid);
         }
     }
