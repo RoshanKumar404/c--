@@ -11,6 +11,7 @@ public class DoubleMain {
     list.insertLLast(32);
     list.InsernextTo(25,3);
     list.display();
+   //  taste of heat
 
    }
 }
