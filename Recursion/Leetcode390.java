@@ -17,6 +17,8 @@ public class Leetcode390 {
         //     left=!left;
         // }
         // return start;
+
+        //***************** */ another logic or logic for recursion***********
          //When we perform the first pass (from the left), we remove all odd numbers. We are left with {2,4,6,…}. If we divide these by 2, we get {1,2,3,…,n/2}.
         //
         //The trick is that the next move on this new sequence is from the right.
