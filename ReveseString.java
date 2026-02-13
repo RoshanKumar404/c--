@@ -7,6 +7,7 @@ public class ReveseString {
         System.out.println(result);
         // System.out.println(java.util.Arrays.toString(s));
     }
+    // in this i shifted the core from char to sctrings
     public static String ReverseString(String ss,int k){
     char[]s =ss.toCharArray();
     for (int i = 0; i < s.length; i+=2*k) {
